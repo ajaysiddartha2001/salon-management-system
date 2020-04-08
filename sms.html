@@ -1,0 +1,123 @@
+<html>
+<head>
+<style>
+
+		body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2E3136;
+    text-align: center;
+}
+		form{
+    text-align:left;
+    margin: 0px;
+    padding: 2px 20px 2px 15px;
+}
+.header{
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2E3136;
+    border-bottom: 2px solid rgb(87, 206, 87);
+}
+.head{
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+    display: inline-block;
+}
+.halfHead{
+    color: rgb(87, 206, 87);
+}
+.fa-renren{
+    color: rgb(87, 206, 87);
+}
+.input{
+    background: none;
+    border: none;
+    background-color: #454955;
+    padding: 10px;
+    margin: 8px auto;
+    width: 97%;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: 1s;
+}
+.text{
+    color: #82858E;
+    font-size: 80%;}
+	
+.signUpForm{
+    width: 40%;
+    margin: 0px auto;
+    background-color: #22252A;
+    border-radius: 8px;
+	padding:3px;
+}
+.submitbtn {
+    background: none;
+    border: none;
+    background-color: rgb(56, 164, 231);
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 30%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+ </style>
+ </head>
+      
+<body>
+
+<div class="header">
+        <h1 class="head">
+            <i class="fa fa-renren"></i> scissors<span class="halfHead">Salon<sup style="font-size:40%; color: white;">&reg</sup>
+            </span>
+        </h1>
+        </div>  
+		<div class="signUpForm">
+		
+<h3 ><font color="white"> salary management system </font></h3>
+<label class ="text">
+<br/> Employee's Name 
+<input type = "text" class="input" id = "emp_name" name= "emp_name">
+<br>
+<br/> Daily Rate
+<input type = "text" class="input" id ="daily_rate" name = "daily_rate">
+<br>
+<br/>Number of Days work
+<input type = "text" class="input"id = "no_days_work" name= "no_days_work">
+<br>
+<br>
+<button class="submitbtn"onclick= "solve_salary()" > solve salary </button>
+<br><br>
+<p id= "demo"></p>
+<p id= "demo2"></p>
+</label>
+</div>
+<script>
+ function solve_salary() {
+var emp_name = document .getElementById ("emp_name").value;
+   var daily_rate = document.getElementById("daily_rate") .value;
+   var no_days_work = document.getElementById( "no_days_work").value;
+   
+gross_pay= parseFloat ( daily_rate) *no_days_work;
+
+results = "Employee's Name : " + emp_name + ".";
+     results2 = "Basic Salary :  " +gross_pay.toFixed(2)+ ".";
+document.getElementById("demo").innerHTML = results ;
+     document.getElementById("demo2").innerHTML = results2;
+}
+</script>
+</body>
+</html>	 
+	 
+       
